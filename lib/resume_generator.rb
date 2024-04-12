@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "resume_generator/version"
+Dir['./lib/*.rb'].each { |file| require file }
 
-module ResumeGenerator
-  class Error < StandardError; end
-  # Your code goes here...
+class ResumeGenerator
+  def initialize type, file
+    generator = Constants::TYPE[type.to_sym] || Constants::TYPE[:Resume]
+    gen = Generate.new(generator, file).to_pdf
+    puts gen
+  end
 end
