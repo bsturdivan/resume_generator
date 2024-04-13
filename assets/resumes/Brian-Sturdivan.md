@@ -4,8 +4,8 @@
 San Francisco
 
 ## Contact
-**email:** [bsturdivan@gmail.com](mailto:bsturdivan@gmail.com) \
-**phone:** [619-592-6788](tel:619-592-6788)
+**email:** [xxx@gmail.com](mailto:xxx@gmail.com) \
+**phone:** [xxx-xxx-xxxx](tel:xxx-xxx-xxxx)
 
 ## Profiles
 **LinkedIn:** [https://linkedin.com/in/bsturd](https://linkedin.com/in/bsturd) \
