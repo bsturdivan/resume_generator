@@ -1,0 +1,105 @@
+:root {
+  --grey1: #222222;
+  --grey2: #30363d;
+  --grey3: #888888;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 62.5%;
+  margin: 0 42px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+  line-height: 1.2em;
+}
+
+
+h1 {
+  font-size: 2.6rem;
+  padding-bottom: 0.16em;
+  border-bottom: var(--grey1);
+  margin-bottom: 1.6rem;
+  padding-top: 0.6em;
+}
+
+h2 {
+  font-size: 2.2rem;
+  padding-bottom: 0.12em;
+  border-bottom: var(--grey1);
+  margin-bottom: 1rem;
+  padding-top: 0.6em;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding-top: 0.6em;
+}
+
+h4 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  padding-top: 0.6em;
+}
+
+h5 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  padding-top: 0.4em;
+}
+
+h6 {
+  font-size: 1.4rem;
+  color: var(--grey);
+  margin-bottom: 0.6rem;
+  padding-top: 0.4em;
+}
+
+p, a {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.4em;
+}
+
+li {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.2em;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+pre {
+  padding: 1.6rem;
+  overflow: auto;
+  font-size: 1.1rem;
+  line-height: 1.4em;
+  color: var(--grey2);
+  background-color: var(var(--grey3));
+  border-radius: 6px;
+}
+
+code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 1rem;
+  white-space: break-spaces;
+  color: var(--grey2);
+  background-color: var(var(--grey3));
+  border-radius: 6px;
+}
+
+img {
+  display: block;
+}

@@ -2,11 +2,12 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in resume_generator.gemspec
-gemspec
-
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
 
 gem "standard", "~> 1.3"
+
+gem "github-markup"
+gem "commonmarker"
+gem 'grover'
