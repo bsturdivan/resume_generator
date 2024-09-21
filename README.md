@@ -6,7 +6,7 @@ Resumes don't need to be complicated or overly designed, they just need to be in
 
 Install ruby and bundler
 
-    `$ git clone https://github.com/bsturdivan/resume_generator.git && bundle install`
+    $ git clone https://github.com/bsturdivan/resume_generator.git && bundle install
 
 ## Usage
 
