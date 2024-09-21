@@ -1,0 +1,14 @@
+require "bundler/setup"
+require 'filewatcher'
+require "./lib/resume_generator"
+
+Filewatcher.new(ARGV[0]).watch do |changes|
+  changes.each do |filename, event|
+    if event == :updated
+      path = Pathname.new(filename).sub_ext('')
+      dir, base = path.split
+      puts 'Saving...'
+      ResumeWatcher.new filename, dir, base
+    end
+  end
+end

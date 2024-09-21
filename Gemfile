@@ -11,3 +11,4 @@ gem "standard", "~> 1.3"
 gem "github-markup"
 gem "commonmarker"
 gem 'grover'
+gem 'filewatcher'

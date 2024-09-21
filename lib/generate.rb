@@ -2,17 +2,20 @@
 require 'grover'
 
 class Generate
-  def initialize type, name
-    @type = type
+  def initialize file, dir, name
+    @file = file
     @name = name
+    @dir = dir
+
+    FileUtils.touch path
   end
 
   def get_html
-    MarkdownFile.new(@type, @name).to_html
+    MarkdownFile.new(@file).to_html
   end
 
   def path
-    "dist/#{@type}/#{@name}.pdf"
+    "#{@dir}/#{@name}.pdf"
   end
 
   def styles
@@ -21,7 +24,7 @@ class Generate
         width: 595,
         height: 842,
       },
-      margin: { top: '64px', right: '42px', bottom: '64px', left: '42px' },
+      margin: { top: '48px', right: '36px', bottom: '48px', left: '36px' },
       style_tag_options: [{
         path: 'assets/styles/style.css'
       }],
@@ -35,6 +38,6 @@ class Generate
   def to_pdf
     Grover.new(get_html, **styles).to_pdf
     
-    "Saved to #{path}"
+    "Saved to #{@dir}"
   end
 end

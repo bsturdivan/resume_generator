@@ -12,6 +12,7 @@
   "author": "Brian Sturdivan",
   "license": "ISC",
   "dependencies": {
+    "github-markdown-css": "^5.6.1",
     "puppeteer": "^22.6.3"
   }
 }
