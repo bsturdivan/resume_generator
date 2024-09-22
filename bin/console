@@ -2,11 +2,18 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
+require 'filewatcher'
 require "./lib/resume_generator"
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+raise "#{ARGV[0]} must reference a file" unless File.file? ARGV[0]
 
-require "irb"
-IRB.start
-
+Filewatcher.new(ARGV[0]).watch do |changes|
+  changes.each do |filename, event|
+    if event == :updated
+      path = Pathname.new(filename).sub_ext('')
+      dir, base = path.split
+      puts 'Saving...'
+      ResumeWatcher.new filename, dir, base
+    end
+  end
+end
